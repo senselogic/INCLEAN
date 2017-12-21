@@ -167,7 +167,7 @@ inclean [options] file_path_filter ...
 
 ```bash
 inclean --use_file_content --or_upper_case_file_name --include "*.hpp" --include "INCLUDE_FOLDER/!/*.hpp" 
-      --comment "// -- IMPORTS" --partial --missing --unused --sort --verbose --print --preview "*.hpp" "*.cpp"
+        --comment "// -- IMPORTS" --partial --missing --unused --sort --verbose --print --preview "*.hpp" "*.cpp"
 ```
 
 Includes the missing ".hpp" files of the current folder and the "INCLUDE_FOLDER" folder and its subfolders

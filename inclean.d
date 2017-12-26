@@ -802,6 +802,8 @@ class CODE
             token_index;
         long[]
             name_space_brace_level_array;
+        string
+            type_name;
         TOKEN
             token;
 
@@ -846,14 +848,22 @@ class CODE
                 }
                 else if ( PartialOptionIsEnabled )
                 {
+                    type_name = "";
+                    
                     foreach ( type; TypeMap )
                     {
                         if ( token.Text.startsWith( type.Name ~ '_' )
+                             && type.Name.length > type_name.length
                              && ( token.Text != token.Text.toUpper()
                                   || token.Text.length == type.Name.length + 2 ) )
                         {
-                            AddUsedType( type.Name );
+                            type_name = type.Name;
                         }
+                    }
+                    
+                    if ( type_name.length > 0 )
+                    {
+                        AddUsedType( type_name );
                     }
                 }
             }

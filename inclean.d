@@ -804,6 +804,8 @@ class CODE
             name_space_brace_level_array;
         string
             type_name;
+        string[]
+            part_array;
         TOKEN
             token;
 
@@ -848,22 +850,22 @@ class CODE
                 }
                 else if ( PartialOptionIsEnabled )
                 {
-                    type_name = "";
-                    
-                    foreach ( type; TypeMap )
+                    if ( ( token.Text in TypeMap ) is null
+                         && token.Text.indexOf( '_' ) >= 0 )
                     {
-                        if ( token.Text.startsWith( type.Name ~ '_' )
-                             && type.Name.length > type_name.length
-                             && ( token.Text != token.Text.toUpper()
-                                  || token.Text.length == type.Name.length + 2 ) )
+                        part_array = token.Text.split( '_' );
+                        
+                        if ( part_array.length >= 2
+                             && ( part_array[ $ - 1 ].length == 1
+                                  || part_array[ $ - 1 ] != part_array[ $ - 1 ].toUpper() ) )
                         {
-                            type_name = type.Name;
+                            type_name = part_array[ 0 .. $ - 1 ].join( '_' );
+                            
+                            if ( ( type_name in TypeMap ) !is null )
+                            {
+                                AddUsedType( type_name );
+                            }
                         }
-                    }
-                    
-                    if ( type_name.length > 0 )
-                    {
-                        AddUsedType( type_name );
                     }
                 }
             }

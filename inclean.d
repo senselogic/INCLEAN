@@ -302,7 +302,7 @@ class CODE
             }
             else
             {
-                token.PriorSpaceCount = token.ColumnIndex - prior_token.ColumnIndex - prior_token.Text.length;
+                token.PriorSpaceCount = token.ColumnIndex - prior_token.ColumnIndex - prior_token.Text.length.to!long();
             }
 
             if ( token_index == 0

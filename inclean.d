@@ -1546,7 +1546,7 @@ void SplitFilePathFilter(
         
         folder_path = folder_path[ 0 .. $ - 1 ];
 
-        span_mode = SpanMode.breadth;
+        span_mode = SpanMode.depth;
     }
     else
     {

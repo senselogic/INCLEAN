@@ -934,8 +934,8 @@ class CODE
             stripped_line;
         string[]
             line_array;
-        TYPE
-            * type;
+        TYPE *
+            type;
 
         line_array = FileText.split( '\n' );
 
@@ -1721,7 +1721,7 @@ void IncludeFile(
     {
         file_text = file_path.ReadUnsafeText();
 
-        code = new CODE;
+        code = new CODE();
         code.Set( file_text, file_path, included_file_path );
         code.FindTypes();
     }
@@ -1842,7 +1842,7 @@ void ProcessFile(
         included_file_path = file_path;
     }
 
-    code = new CODE;
+    code = new CODE();
     code.Set( file_text, file_path, included_file_path );
     code.Process();
 

@@ -1,13 +1,9 @@
 #ifndef __VECTOR_HPP__
     #define __VECTOR_HPP__
 
-    // == LOCAL
-
     // -- IMPORTS
 
     #include "real_32.hpp"
-
-    // == GLOBAL
 
     // -- TYPES
 

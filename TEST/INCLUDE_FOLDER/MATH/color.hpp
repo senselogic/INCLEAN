@@ -1,13 +1,9 @@
 #ifndef __COLOR_HPP__
     #define __COLOR_HPP__
 
-    // == LOCAL
-
     // -- IMPORTS
 
     #include "natural_8.hpp"
-
-    // == GLOBAL
 
     // -- TYPES
 

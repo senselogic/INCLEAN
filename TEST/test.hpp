@@ -1,22 +1,18 @@
 #ifndef __TEST_HPP__
     #define __TEST_HPP__
-    
-    // == LOCAL
-    
+
     // -- IMPORTS
-    
-    // == GLOBAL
-    
+
     // -- TYPES
-    
+
     class TEST
     {
         // == PUBLIC
-        
+
         public :
-        
+
         // -- ATTRIBUTES
-        
+
         INTEGER_32
             Integer;
         NATURAL_32
@@ -31,9 +27,9 @@
             ZVector;
         VECTOR_<REAL_32>
             RealVector;
-            
+
         // -- CONTRUCTORS
-            
+
         TEST(
             ) :
             Integer( 0 ),
@@ -46,16 +42,16 @@
             RealVector()
         {
         }
-        
+
         // -- DESTRUCTOR
-        
+
         ~TEST(
             )
         {
         }
-        
+
         // -- OPERATIONS
-            
+
         VOID Set(
             const INTEGER_32 integer,
             const NATURAL_32 natural,

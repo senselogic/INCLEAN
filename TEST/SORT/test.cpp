@@ -1,7 +1,5 @@
 #include "test.hpp"
 
-// == LOCAL
-
 // -- IMPORTS
 
 #include "void.hpp"

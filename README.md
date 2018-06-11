@@ -14,9 +14,7 @@ Inclusion directive cleaner.
 ```c++
 #ifndef __TEST_HPP__
     #define __TEST_HPP__
-    
-    // == LOCAL
-    
+
     // -- IMPORTS
 
     #include "integer_32.hpp"
@@ -24,19 +22,17 @@ Inclusion directive cleaner.
     #include "real_32.hpp"
     #include "string_8.hpp"
     #include "void.hpp"
-    
-    // == GLOBAL
-    
+
     // -- TYPES
-    
+
     class TEST
     {
         // == PUBLIC
-        
+
         public :
-        
+
         // -- ATTRIBUTES
-        
+
         INTEGER_32
             Integer;
         NATURAL_32
@@ -51,9 +47,9 @@ Inclusion directive cleaner.
             ZVector;
         VECTOR_<REAL_32>
             RealVector;
-            
+
         // -- CONTRUCTORS
-            
+
         TEST(
             ) :
             Integer( 0 ),
@@ -66,16 +62,16 @@ Inclusion directive cleaner.
             RealVector()
         {
         }
-        
+
         // -- DESTRUCTOR
-        
+
         ~TEST(
             )
         {
         }
-        
+
         // -- OPERATIONS
-            
+
         VOID Set(
             const INTEGER_32 integer,
             const NATURAL_32 natural,
@@ -88,8 +84,6 @@ Inclusion directive cleaner.
 
 ```c++
 #include "test.hpp"
-
-// == LOCAL
 
 // -- IMPORTS
 
@@ -166,7 +160,7 @@ inclean [options] file_path_filter ...
 ### Example
 
 ```bash
-inclean --use_file_content --or_upper_case_file_name --include "*.hpp" --include "INCLUDE_FOLDER/!/*.hpp" 
+inclean --use_file_content --or_upper_case_file_name --include "*.hpp" --include "INCLUDE_FOLDER/!/*.hpp"
         --comment "// -- IMPORTS" --partial --missing --unused --sort --verbose --print --preview "*.hpp" "*.cpp"
 ```
 
@@ -174,7 +168,7 @@ Includes the missing ".hpp" files of the current folder and the "INCLUDE_FOLDER"
 after the "// -- IMPORTS" comment in the ".hpp" and ".cpp" files of the current folder.
 
 ```bash
-inclean --sort --verbose ".//*.hpp" ".//*.cpp"        
+inclean --sort --verbose ".//*.hpp" ".//*.cpp"
 ```
 
 Sorts the inclusions in the ".hpp" and ".cpp" files of the current folder and its subfolders.

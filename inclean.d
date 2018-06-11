@@ -18,8 +18,6 @@
     along with Inclean.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// == LOCAL
-
 // -- IMPORTS
 
 import core.stdc.stdlib : exit;
@@ -781,7 +779,7 @@ class CODE
                 else if ( token.Text == "}" )
                 {
                     --brace_level;
-                    
+
                     if ( name_space_brace_level_array.length > 0
                          && brace_level <= name_space_brace_level_array[ $ - 1 ] )
                     {
@@ -854,13 +852,13 @@ class CODE
                          && token.Text.indexOf( '_' ) >= 0 )
                     {
                         part_array = token.Text.split( '_' );
-                        
+
                         if ( part_array.length >= 2
                              && ( part_array[ $ - 1 ].length == 1
                                   || part_array[ $ - 1 ] != part_array[ $ - 1 ].toUpper() ) )
                         {
                             type_name = part_array[ 0 .. $ - 1 ].join( '_' );
-                            
+
                             if ( ( type_name in TypeMap ) !is null )
                             {
                                 AddUsedType( type_name );
@@ -878,7 +876,7 @@ class CODE
                 else if ( token.Text == "}" )
                 {
                     --brace_level;
-                    
+
                     if ( name_space_brace_level_array.length > 0
                          && brace_level <= name_space_brace_level_array[ $ - 1 ] )
                     {
@@ -1132,8 +1130,6 @@ class CODE
         }
     }
 }
-
-// == GLOBAL
 
 // -- VARIABLES
 
@@ -1543,7 +1539,7 @@ void SplitFilePathFilter(
         {
             removed_character_count = -1;
         }
-        
+
         folder_path = folder_path[ 0 .. $ - 1 ];
 
         span_mode = SpanMode.depth;

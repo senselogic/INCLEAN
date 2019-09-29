@@ -117,7 +117,7 @@ VOID TEST::Set(
 
 ## Installation
 
-Install the [DMD 2 compiler](https://dlang.org/download.html).
+Install the [DMD 2 compiler](https://dlang.org/download.html) (choosing the MinGW installation option on Windows).
 
 Build the executable with the following command line :
 

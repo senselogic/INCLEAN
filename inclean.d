@@ -1759,9 +1759,9 @@ void IncludeFiles(
         dirEntries( folder_path, span_mode )
         )
     {
-        if ( folder_entry.isFile() )
+        if ( folder_entry.isFile )
         {
-            file_path = folder_entry;
+            file_path = folder_entry.name;
             file_name = file_path.GetFileName();
 
             if ( file_name.globMatch( file_name_filter ) )
@@ -1801,9 +1801,9 @@ void ExcludeFiles(
         dirEntries( folder_path, span_mode )
         )
     {
-        if ( folder_entry.isFile() )
+        if ( folder_entry.isFile )
         {
-            file_path = folder_entry;
+            file_path = folder_entry.name;
             file_name = file_path.GetFileName();
 
             if ( file_name.globMatch( file_name_filter ) )
